@@ -1,4 +1,6 @@
 ﻿using System;
+using GeoJsonDemo.Pages;
+using GeoJsonDemo.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,7 +11,12 @@ namespace GeoJsonDemo
         public App()
         {
             InitializeComponent();
-            MainPage = new MainPage();
+
+            GeoJsonMapViewModel viewModel = new GeoJsonMapViewModel();
+            GeoJsonMapPage page = new GeoJsonMapPage(viewModel);
+
+            NavigationPage navigationPage = new NavigationPage(page);
+            MainPage = navigationPage;
         }
 
         protected override void OnStart()
