@@ -22,5 +22,16 @@
     <Folder Include="ViewModels\Bases\" />
     <Folder Include="Pages\" />
     <Folder Include="Pages\Bases\" />
+    <Folder Include="Managers\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\i60.geo.json" />
+    <None Remove="Resources\q4v.geo.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\i60.geo.json" />
+    <EmbeddedResource Include="Resources\q4v.geo.json" />
   </ItemGroup>
 </Project>

@@ -12,6 +12,9 @@ namespace GeoJsonDemo
         {
             InitializeComponent();
 
+            //_ = ApplicationManager.Current.GetLocationAsync();
+            ApplicationManager.Current.UpdateLocation(TimeSpan.FromSeconds(10));
+
             GeoJsonMapViewModel viewModel = new GeoJsonMapViewModel();
             GeoJsonMapPage page = new GeoJsonMapPage(viewModel);
 

@@ -1,8 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<pages:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GeoJsonDemo.Pages.GeoJsonMapPage" xmlns:pages="clr-namespace:GeoJsonDemo.Pages" xmlns:controls="clr-namespace:GeoJsonDemo.Controls">
+<pages:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       x:Class="GeoJsonDemo.Pages.GeoJsonMapPage"
+                       xmlns:pages="clr-namespace:GeoJsonDemo.Pages"
+                       xmlns:controls="clr-namespace:GeoJsonDemo.Controls">
     <pages:BaseContentPage.Content>
         <ContentView>
-
+            <StackLayout>
+                <controls:CustomMapView Features="{Binding GeoJsonFeatures}"
+                                        FeatureSelectedCommand="{Binding FeatureSelectedCommand}"
+                                        MapPosition="{Binding MapPosition}"
+                                        MapFinishedCommand="{Binding MapFinishedCommand}"
+                                        FeatureLineWidth="3"
+                                        IsFeatureClickeable="true"/>
+            </StackLayout>
         </ContentView>
     </pages:BaseContentPage.Content>
 </pages:BaseContentPage>
